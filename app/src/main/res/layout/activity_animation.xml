@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".AnimationActivity">
+
+    <!--moving ball
+
+    <ImageView
+        android:id="@+id/imageViewBall"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/baseline_sports_baseball_24"/>-->
+
+
+    <!--football
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/football_goal_post"
+        android:layout_centerInParent="true"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:id="@+id/imageViewBall"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/baseline_sports_baseball_24"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="65dp"/>-->
+
+
+    <!--bouncing ball
+
+    <ImageView
+        android:id="@+id/imageViewBall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/baseline_sports_baseball_24"/>-->
+
+
+    moving car
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/white"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/imageViewCar"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:src="@drawable/car"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/imageViewCarWheelFront"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="108dp"
+            android:layout_marginBottom="58dp"
+            android:src="@drawable/car_wheel" />
+
+        <ImageView
+            android:id="@+id/imageViewCarWheelBack"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="59dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/car_wheel"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

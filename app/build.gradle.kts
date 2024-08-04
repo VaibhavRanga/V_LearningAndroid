@@ -14,7 +14,7 @@ android {
     defaultConfig {
         applicationId = "com.vaibhavranga.v_learningandroid"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -51,8 +51,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     //circular image view
-    implementation(libs.de.hdodenhof.circleimageview)
-
+    implementation(libs.hdodenhof.circleimageview)
     //lottie animation
-    implementation(libs.com.airbnb.android)
+    implementation(libs.airbnb.android.lottie)
 }

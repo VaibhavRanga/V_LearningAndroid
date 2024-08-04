@@ -6,6 +6,8 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.vaibhavranga.v_learningandroid.databinding.ActivitySplashBinding
+import com.vaibhavranga.v_learningandroid.fragments.FragmentsActivity
+import com.vaibhavranga.v_learningandroid.tablayoutviewpager2.TabViewPager2Activity
 
 class SplashActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashBinding
@@ -18,7 +20,7 @@ class SplashActivity : AppCompatActivity() {
 
         Handler(Looper.getMainLooper()).postDelayed(object : Runnable {
             override fun run() {
-                val iNext = Intent(this@SplashActivity, MotionLayoutAnimation2Activity::class.java)
+                val iNext = Intent(this@SplashActivity, TabViewPager2Activity::class.java)
                 iNext.putExtra("Name", "Sam")
                 iNext.putExtra("Age", 10)
 

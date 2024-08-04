@@ -47,7 +47,7 @@
         android:src="@drawable/baseline_sports_baseball_24"/>-->
 
 
-    moving car
+    <!--moving car-->
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -1,11 +1,13 @@
 package com.vaibhavranga.v_learningandroid
 
 import android.app.Dialog
+import android.content.DialogInterface
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.vaibhavranga.v_learningandroid.databinding.ActivityDialogBinding
 import com.vaibhavranga.v_learningandroid.databinding.CustomDialogBoxBinding
 
@@ -51,6 +53,20 @@ class DialogActivity : AppCompatActivity() {
             buttonCancel.setOnClickListener {
                 addContactDialog.dismiss()
             }
+        }
+
+        binding.buttonShowAlertDialog.setOnClickListener {
+            val alertDialog = MaterialAlertDialogBuilder(this@DialogActivity)
+
+//            alertDialog.setView()
+            alertDialog.setPositiveButton("Yes", object : DialogInterface.OnClickListener {
+                override fun onClick(dialog: DialogInterface?, which: Int) {
+
+                }
+            })
+
+
+            alertDialog.show()
         }
     }
 }

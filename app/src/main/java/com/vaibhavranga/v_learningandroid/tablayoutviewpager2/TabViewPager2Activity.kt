@@ -36,6 +36,7 @@ class TabViewPager2Activity : AppCompatActivity() {
                     tab.text = tabsList[position].title
                     tab.icon = ResourcesCompat.getDrawable(resources, tabsList[position].icon, null)
                 }
-            }).attach()
+            }
+        ).attach()
     }
 }

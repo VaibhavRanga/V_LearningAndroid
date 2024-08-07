@@ -16,7 +16,6 @@ import com.vaibhavranga.v_learningandroid.databinding.ActivityRecyclerViewBindin
 class RecyclerViewActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRecyclerViewBinding
     private val contactsArray = ArrayList<ContactModel>()
-    private var isDoubleBackPressed = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

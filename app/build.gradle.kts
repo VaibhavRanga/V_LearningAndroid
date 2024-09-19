@@ -54,4 +54,8 @@ dependencies {
     implementation(libs.hdodenhof.circleimageview)
     //lottie animation
     implementation(libs.airbnb.android.lottie)
+    //intuit sdp
+    implementation("com.intuit.sdp:sdp-android:1.1.1")
+    //intuit ssp
+    implementation("com.intuit.ssp:ssp-android:1.1.1")
 }

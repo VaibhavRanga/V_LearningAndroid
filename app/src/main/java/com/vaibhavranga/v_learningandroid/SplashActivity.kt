@@ -20,7 +20,7 @@ class SplashActivity : AppCompatActivity() {
 
         Handler(Looper.getMainLooper()).postDelayed(object : Runnable {
             override fun run() {
-                val iNext = Intent(this@SplashActivity, TabViewPager2Activity::class.java)
+                val iNext = Intent(this@SplashActivity, LinearAndRelativeLayoutsActivity::class.java)
                 iNext.putExtra("Name", "Sam")
                 iNext.putExtra("Age", 10)
 

@@ -4,4 +4,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="green_button">#FFb7d84f</color>
     <color name="blue_top_bg">#FF1d2f3e</color>
+
+    <color name="heading_bg">#192533</color>
+    <color name="subheading_text">#ABB2B7</color>
+    <color name="forgot_password">#86A646</color>
+    <color name="green_color">#C8E776</color>
+    <color name="login_text">#1A1A1A</color>
+    <color name="edittext_border">#E0E0E0</color>
 </resources>

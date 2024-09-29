@@ -20,7 +20,7 @@ class SplashActivity : AppCompatActivity() {
 
         Handler(Looper.getMainLooper()).postDelayed(object : Runnable {
             override fun run() {
-                val iNext = Intent(this@SplashActivity, TopAppBarActivity::class.java)
+                val iNext = Intent(this@SplashActivity, WebViewActivity::class.java)
                 iNext.putExtra("Name", "Sam")
                 iNext.putExtra("Age", 10)
 

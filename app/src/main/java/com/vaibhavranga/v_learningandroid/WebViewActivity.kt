@@ -1,13 +1,16 @@
 package com.vaibhavranga.v_learningandroid
 
 import android.graphics.Bitmap
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.View
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.addCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -49,54 +52,23 @@ class WebViewActivity : AppCompatActivity() {
         binding.webView.settings.javaScriptEnabled = true
         binding.webView.settings.setSupportZoom(true)
 
-        val callback =
-            this@WebViewActivity.onBackPressedDispatcher.addCallback(this@WebViewActivity) {
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
                 if (binding.webView.canGoBack()) {
                     binding.webView.goBack()
                 } else {
                     if (isDoubleBackPressed) {
-                        handleOnBackPressed()
+                        finish()
                     }
                     isDoubleBackPressed = true
-                    Toast.makeText(this@WebViewActivity, "Press back again", Toast.LENGTH_SHORT)
-                        .show()
+                    Toast.makeText(this@WebViewActivity, "Press back again", Toast.LENGTH_SHORT).show()
                     Handler(Looper.getMainLooper()).postDelayed({
                         isDoubleBackPressed = false
                     }, 2000)
                 }
             }
+        }
+
+        onBackPressedDispatcher.addCallback(this@WebViewActivity, callback)
     }
-
-//    override fun onBackPressed() {
-//        super.onBackPressed()
-//        if (binding.webView.canGoBack()) {
-//            binding.webView.goBack()
-//        } else {
-//            if (isDoubleBackPressed) {
-//                onBackPressedDispatcher.onBackPressed()
-//                return
-//            }
-//            isDoubleBackPressed = true
-//            Toast.makeText(this, "Press back again", Toast.LENGTH_SHORT).show()
-//            Handler(Looper.getMainLooper()).postDelayed({
-//                isDoubleBackPressed = false
-//            }, 2000)
-//        }
-//    }
-
-//    override fun getOnBackInvokedDispatcher(): OnBackInvokedDispatcher {
-//        if (binding.webView.canGoBack()) {
-//            binding.webView.goBack()
-//        } else {
-//            if (isDoubleBackPressed) {
-//                return super.getOnBackInvokedDispatcher()
-//            }
-//            isDoubleBackPressed = true
-//            Toast.makeText(this, "Press back again", Toast.LENGTH_SHORT).show()
-//            Handler(Looper.getMainLooper()).postDelayed({
-//                isDoubleBackPressed = false
-//            }, 2000)
-//        }
-//        return onBackInvokedDispatcher
-//    }
 }
